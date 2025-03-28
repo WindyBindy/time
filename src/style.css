@@ -33,7 +33,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 800px;
+	height: 100vh;
 	background-color: rgb(41, 41, 41);
 }
 /* box */
