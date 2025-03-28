@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+}
+.container {
+	padding-left: 56px;
+	padding-right: 56px;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+}
+
+/* start! */
+/* body */
+body {
+	font-size: 27px;
+	font-weight: bold;
+	font-family: 'Fira Code';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 800px;
+	background-color: rgb(41, 41, 41);
+}
+/* box */
+main {
+	background-color: rgb(41, 41, 41);
+	width: 400px;
+	border: 1px transparent solid;
+	height: 410px;
+	position: relative;
+	padding-top: 35px;
+}
+
+.maindiv {
+	border: rgb(78, 78, 78) solid 4px;
+	border-radius: 15px;
+	padding: 20px;
+}
+
+.maindiv::before {
+	content: '';
+
+	width: 150px;
+	background-color: rgb(78, 78, 78);
+	height: 25px;
+	position: absolute;
+	top: 11px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	z-index: 1;
+}
+
+.title {
+	position: absolute;
+	top: 9px;
+	left: 30px;
+	z-index: 2;
+	font-size: 20px;
+	color: rgb(173, 173, 173);
+}
+.icon {
+	position: absolute;
+	top: 16px;
+	left: 150px;
+	width: 15px;
+	height: 15px;
+	z-index: 3;
+	background-color: rgb(153, 81, 81);
+	border-radius: 100%;
+}
