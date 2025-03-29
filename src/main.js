@@ -5,18 +5,32 @@ const periodElement = document.getElementById('periodJs')
 const dayElement = document.getElementById('dayJs')
 const monthElement = document.getElementById('monthJs')
 const yearElement = document.getElementById('yearJs')
-
+const months = [
+	'January',
+	'February',
+	'March',
+	'April',
+	'May',
+	'June',
+	'July',
+	'August',
+	'September',
+	'October',
+	'November',
+	'December',
+]
 function updateClock() {
 	let time = new Date()
 	let date = time.toDateString()
 	let timed = time.toLocaleTimeString()
-	let hours = timed.slice(0, 2)
-	let minuts = timed.slice(3, 5)
-	let seconds = timed.slice(6, 8)
+	let hours = time.getHours()
+	let minuts = time.getMinutes()
+	let seconds = time.getSeconds()
 	let dayWeek = date.slice(0, 3)
-	let month = date.slice(4, 7)
-	let day = date.slice(8, 10)
-	let year = date.slice(11, 15)
+	let month = months[time.getMonth()]
+	let day = time.getDate()
+	let year = time.getFullYear()
+
 	let period = null
 	if (hours < 12) {
 		period = 'AM'
